@@ -10,6 +10,7 @@ import React, {
 import { useRecoilValue, useRecoilCallback } from 'recoil';
 import type { LucideIcon } from 'lucide-react';
 import { useChatBadges } from '~/hooks';
+import { MCPSelect } from './MCPSelect';
 import { Badge } from '~/components/ui';
 import { BadgeItem } from '~/common';
 import store from '~/store';
@@ -340,6 +341,7 @@ export function BadgeRow({ onChange, onToggle, isInChat }: BadgeRowProps) {
           />
         </div>
       )}
+      <MCPSelect />
       {ghostBadge && (
         <div
           className="ghost-badge h-full"
